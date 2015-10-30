@@ -1,0 +1,658 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00007fd80aad44c6, pid=2733, tid=140565168502528
+#
+# JRE version: Java(TM) SE Runtime Environment (8.0_51-b16) (build 1.8.0_51-b16)
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (25.51-b03 mixed mode linux-amd64 compressed oops)
+# Problematic frame:
+# C  [libc.so.6+0x14d4c6]
+#
+# Failed to write core dump. Core dumps have been disabled. To enable core dumping, try "ulimit -c unlimited" before starting Java again
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.java.com/bugreport/crash.jsp
+# The crash happened outside the Java Virtual Machine in native code.
+# See problematic frame for where to report the bug.
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00007fd7a8016000):  JavaThread "grpc-default-executor-1" daemon [_thread_in_native, id=2910, stack(0x00007fd7e0dfb000,0x00007fd7e0efc000)]
+
+siginfo: si_signo: 11 (SIGSEGV), si_code: 1 (SEGV_MAPERR), si_addr: 0x00007fd80b5af000
+
+Registers:
+RAX=0x00007fd79c01b7d0, RBX=0x000000000000682f, RCX=0x0000000000003106, RDX=0x000000000000682f
+RSP=0x00007fd7e0ef7f58, RBP=0x00007fd7e0ef7fb0, RSI=0x00007fd80b5af000, RDI=0x00007fd79c01eef9
+R8 =0x0000000000021000, R9 =0x00007fd79c000000, R10=0x00007fd79c000078, R11=0x0000000000000206
+R12=0x00007fd80b59d8d4, R13=0x00007fd79c004880, R14=0x0000000000007365, R15=0x00007fd80418d400
+RIP=0x00007fd80aad44c6, EFLAGS=0x0000000000010283, CSGSFS=0xffff000000000033, ERR=0x0000000000000004
+  TRAPNO=0x000000000000000e
+
+Top of Stack: (sp=0x00007fd7e0ef7f58)
+0x00007fd7e0ef7f58:   00007fd808423a1e 00000000d6c58280
+0x00007fd7e0ef7f68:   682f650000000000 0000000000006c70
+0x00007fd7e0ef7f78:   0000000065482f64 00007fd79c004880
+0x00007fd7e0ef7f88:   00007fd80418d7c0 00007fd7a801cbd0
+0x00007fd7e0ef7f98:   00007fd80418d400 00000000f5f26fc3
+0x00007fd7e0ef7fa8:   0000000000000037 00007fd7e0ef8010
+0x00007fd7e0ef7fb8:   00007fd808423f2f 00007fd7a8016000
+0x00007fd7e0ef7fc8:   01000000d6c58930 00007fd7e0ef8030
+0x00007fd7e0ef7fd8:   00007fd7e0ef8068 00007fd7e0ef8066
+0x00007fd7e0ef7fe8:   00007fd7e0ef8030 0000000000000037
+0x00007fd7e0ef7ff8:   00007fd7a80161f8 00007fd7e0ef8488
+0x00007fd7e0ef8008:   0000000000000001 00007fd7e0ef8470
+0x00007fd7e0ef8018:   00007fd808415d30 00007fd7e0ef8780
+0x00007fd7e0ef8028:   00007fd80418d400 2f637072672f6f69
+0x00007fd7e0ef8038:   73656c706d617865 6f776f6c6c65682f
+0x00007fd7e0ef8048:   6c6c65482f646c72 736e6f707365526f
+0x00007fd7e0ef8058:   65646c6975422465 007373616c632e72
+0x00007fd7e0ef8068:   0000000000000000 0001ce9411636fb8
+0x00007fd7e0ef8078:   00001d3e00000000 0000000000000000
+0x00007fd7e0ef8088:   00000000d8a38140 00000000d6c585f0
+0x00007fd7e0ef8098:   00007fd800000000 00000000e0ef8220
+0x00007fd7e0ef80a8:   00007fd700000000 0000000000000000
+0x00007fd7e0ef80b8:   00007fd7e0ef8160 00000000d6c7ac60
+0x00007fd7e0ef80c8:   00000000000160a8 0000000000000000
+0x00007fd7e0ef80d8:   000000000000003f 0000000000000000
+0x00007fd7e0ef80e8:   0000000000000000 00007fd7ffffffc1
+0x00007fd7e0ef80f8:   00007fd80aa033be 00007fd80a4ca1da
+0x00007fd7e0ef8108:   00007fd7e0ef86f0 00007fd7e0ef8870
+0x00007fd7e0ef8118:   00007fd80a4ca1d8 00007fd7e0ef8870
+0x00007fd7e0ef8128:   00007fd80a9d472e 00007fd7e0ef8870
+0x00007fd7e0ef8138:   00007fd7e0ef8280 00007fd80a4ca1d8
+0x00007fd7e0ef8148:   00000000004b5804 00000000e0ef8890 
+
+Instructions: (pc=0x00007fd80aad44c6)
+0x00007fd80aad44a6:   c0 c3 0f 1f 84 00 00 00 00 00 48 8b 0d 81 6d 27
+0x00007fd80aad44b6:   00 48 c1 e1 03 48 39 ca 73 10 48 89 d1 48 89 d1
+0x00007fd80aad44c6:   f3 a4 c3 0f 1f 80 00 00 00 00 48 8d 0c 16 c5 fe
+0x00007fd80aad44d6:   6f 26 c5 fa 6f 6c 16 80 c5 fa 6f 71 90 c5 fa 6f 
+
+Register to memory mapping:
+
+RAX=0x00007fd79c01b7d0 is an unknown value
+RBX=0x000000000000682f is an unknown value
+RCX=0x0000000000003106 is an unknown value
+RDX=0x000000000000682f is an unknown value
+RSP=0x00007fd7e0ef7f58 is pointing into the stack for thread: 0x00007fd7a8016000
+RBP=0x00007fd7e0ef7fb0 is pointing into the stack for thread: 0x00007fd7a8016000
+RSI=0x00007fd80b5af000 is an unknown value
+RDI=0x00007fd79c01eef9 is an unknown value
+R8 =0x0000000000021000 is an unknown value
+R9 =0x00007fd79c000000 is an unknown value
+R10=0x00007fd79c000078 is an unknown value
+R11=0x0000000000000206 is an unknown value
+R12=0x00007fd80b59d8d4 is an unknown value
+R13=0x00007fd79c004880 is an unknown value
+R14=0x0000000000007365 is an unknown value
+R15=0x00007fd80418d400 is an unknown value
+
+
+Stack: [0x00007fd7e0dfb000,0x00007fd7e0efc000],  sp=0x00007fd7e0ef7f58,  free space=1011k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [libc.so.6+0x14d4c6]
+C  [libzip.so+0x11f2f]  ZIP_GetEntry2+0xff
+C  [libzip.so+0x3d30]  Java_java_util_zip_ZipFile_getEntry+0xf0
+J 112  java.util.zip.ZipFile.getEntry(J[BZ)J (0 bytes) @ 0x00007fd7f5142ece [0x00007fd7f5142e00+0xce]
+J 631 C2 java.util.jar.JarFile.getEntry(Ljava/lang/String;)Ljava/util/zip/ZipEntry; (22 bytes) @ 0x00007fd7f5288148 [0x00007fd7f5287e00+0x348]
+
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+J 112  java.util.zip.ZipFile.getEntry(J[BZ)J (0 bytes) @ 0x00007fd7f5142e58 [0x00007fd7f5142e00+0x58]
+J 631 C2 java.util.jar.JarFile.getEntry(Ljava/lang/String;)Ljava/util/zip/ZipEntry; (22 bytes) @ 0x00007fd7f5288148 [0x00007fd7f5287e00+0x348]
+J 656 C2 sun.misc.URLClassPath$JarLoader.getResource(Ljava/lang/String;Z)Lsun/misc/Resource; (85 bytes) @ 0x00007fd7f5297604 [0x00007fd7f52974e0+0x124]
+J 197 C1 sun.misc.URLClassPath.getResource(Ljava/lang/String;Z)Lsun/misc/Resource; (83 bytes) @ 0x00007fd7f517196c [0x00007fd7f5171800+0x16c]
+J 231 C1 java.net.URLClassLoader$1.run()Ljava/lang/Class; (63 bytes) @ 0x00007fd7f51887ac [0x00007fd7f51885a0+0x20c]
+J 230 C1 java.net.URLClassLoader$1.run()Ljava/lang/Object; (5 bytes) @ 0x00007fd7f518820c [0x00007fd7f5188180+0x8c]
+v  ~StubRoutines::call_stub
+J 229  java.security.AccessController.doPrivileged(Ljava/security/PrivilegedExceptionAction;Ljava/security/AccessControlContext;)Ljava/lang/Object; (0 bytes) @ 0x00007fd7f5187023 [0x00007fd7f5186fc0+0x63]
+J 227 C1 java.net.URLClassLoader.findClass(Ljava/lang/String;)Ljava/lang/Class; (47 bytes) @ 0x00007fd7f5187544 [0x00007fd7f51873c0+0x184]
+J 146 C1 java.lang.ClassLoader.loadClass(Ljava/lang/String;Z)Ljava/lang/Class; (122 bytes) @ 0x00007fd7f5153a5c [0x00007fd7f5153100+0x95c]
+J 279 C1 sun.misc.Launcher$AppClassLoader.loadClass(Ljava/lang/String;Z)Ljava/lang/Class; (85 bytes) @ 0x00007fd7f51a4dcc [0x00007fd7f51a4440+0x98c]
+J 278 C1 java.lang.ClassLoader.loadClass(Ljava/lang/String;)Ljava/lang/Class; (7 bytes) @ 0x00007fd7f51a5bc4 [0x00007fd7f51a5ac0+0x104]
+v  ~StubRoutines::call_stub
+j  io.grpc.examples.helloworld.HelloResponse.toBuilder()Lio/grpc/examples/helloworld/HelloResponse$Builder;+7
+j  io.grpc.examples.helloworld.HelloResponse.newBuilder()Lio/grpc/examples/helloworld/HelloResponse$Builder;+3
+j  io.grpc.examples.helloworld.HelloWorldServer$GreeterImpl.sayHello(Lio/grpc/examples/helloworld/HelloRequest;Lio/grpc/stub/StreamObserver;)V+4
+j  io.grpc.examples.helloworld.GreeterGrpc$3.invoke(Lio/grpc/examples/helloworld/HelloRequest;Lio/grpc/stub/StreamObserver;)V+6
+j  io.grpc.examples.helloworld.GreeterGrpc$3.invoke(Ljava/lang/Object;Lio/grpc/stub/StreamObserver;)V+6
+j  io.grpc.stub.ServerCalls$1$1.onHalfClose()V+22
+j  io.grpc.internal.ServerImpl$ServerCallImpl$ServerStreamListenerImpl.halfClosed()V+15
+j  io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$2.run()V+7
+j  io.grpc.internal.SerializingExecutor$TaskRunner.run()V+71
+j  java.util.concurrent.ThreadPoolExecutor.runWorker(Ljava/util/concurrent/ThreadPoolExecutor$Worker;)V+95
+j  java.util.concurrent.ThreadPoolExecutor$Worker.run()V+5
+j  java.lang.Thread.run()V+11
+v  ~StubRoutines::call_stub
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+=>0x00007fd7a8016000 JavaThread "grpc-default-executor-1" daemon [_thread_in_native, id=2910, stack(0x00007fd7e0dfb000,0x00007fd7e0efc000)]
+  0x00007fd7ac032800 JavaThread "grpc-default-worker-ELG-1" daemon [_thread_in_native, id=2908, stack(0x00007fd7e2efe000,0x00007fd7e2fff000)]
+  0x00007fd7b005a000 JavaThread "threadDeathWatcher-2-1" daemon [_thread_blocked, id=2786, stack(0x00007fd7e806d000,0x00007fd7e816e000)]
+  0x00007fd7ac054000 JavaThread "grpc-default-worker-ELG-0" daemon [_thread_in_native, id=2785, stack(0x00007fd7e836e000,0x00007fd7e846f000)]
+  0x00007fd804556800 JavaThread "grpc-default-boss-ELG-0" daemon [_thread_in_native, id=2756, stack(0x00007fd7e8889000,0x00007fd7e898a000)]
+  0x00007fd80428a800 JavaThread "Service Thread" daemon [_thread_blocked, id=2752, stack(0x00007fd7e8fa3000,0x00007fd7e90a4000)]
+  0x00007fd80427f800 JavaThread "C1 CompilerThread2" daemon [_thread_blocked, id=2751, stack(0x00007fd7e90a4000,0x00007fd7e91a5000)]
+  0x00007fd80427d800 JavaThread "C2 CompilerThread1" daemon [_thread_blocked, id=2750, stack(0x00007fd7e91a5000,0x00007fd7e92a6000)]
+  0x00007fd804278800 JavaThread "C2 CompilerThread0" daemon [_thread_blocked, id=2749, stack(0x00007fd7e92a6000,0x00007fd7e93a7000)]
+  0x00007fd804180000 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=2748, stack(0x00007fd7e9f0c000,0x00007fd7ea00d000)]
+  0x00007fd804148000 JavaThread "Finalizer" daemon [_thread_blocked, id=2747, stack(0x00007fd7ea6ef000,0x00007fd7ea7f0000)]
+  0x00007fd804145800 JavaThread "Reference Handler" daemon [_thread_blocked, id=2746, stack(0x00007fd7ea7f0000,0x00007fd7ea8f1000)]
+  0x00007fd80400b800 JavaThread "main" [_thread_blocked, id=2740, stack(0x00007fd80b48c000,0x00007fd80b58d000)]
+
+Other Threads:
+  0x00007fd804140800 VMThread [stack: 0x00007fd7ea8f1000,0x00007fd7ea9f2000] [id=2745]
+  0x00007fd80428d000 WatcherThread [stack: 0x00007fd7e8ea2000,0x00007fd7e8fa3000] [id=2753]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap:
+ PSYoungGen      total 36864K, used 31537K [0x00000000d6c00000, 0x00000000d9500000, 0x0000000100000000)
+  eden space 31744K, 99% used [0x00000000d6c00000,0x00000000d8acc4c8,0x00000000d8b00000)
+  from space 5120K, 0% used [0x00000000d9000000,0x00000000d9000000,0x00000000d9500000)
+  to   space 5120K, 0% used [0x00000000d8b00000,0x00000000d8b00000,0x00000000d9000000)
+ ParOldGen       total 84992K, used 0K [0x0000000084400000, 0x0000000089700000, 0x00000000d6c00000)
+  object space 84992K, 0% used [0x0000000084400000,0x0000000084400000,0x0000000089700000)
+ Metaspace       used 10461K, capacity 10590K, committed 10880K, reserved 1058816K
+  class space    used 1281K, capacity 1335K, committed 1408K, reserved 1048576K
+
+Card table byte_map: [0x00007fd7f4c21000,0x00007fd7f5000000] byte_map_base: 0x00007fd7f47ff000
+
+Marking Bits: (ParMarkBitMap*) 0x00007fd80a95c660
+ Begin Bits: [0x00007fd7f07a9000, 0x00007fd7f2699000)
+ End Bits:   [0x00007fd7f2699000, 0x00007fd7f4589000)
+
+Polling page: 0x00007fd80b5a9000
+
+CodeCache: size=245760Kb used=2768Kb max_used=2768Kb free=242991Kb
+ bounds [0x00007fd7f5000000, 0x00007fd7f52c0000, 0x00007fd804000000]
+ total_blobs=1069 nmethods=727 adapters=256
+ compilation: enabled
+
+Compilation events (10 events):
+Event: 124.524 Thread 0x00007fd80427f800 nmethod 722 0x00007fd7f52af510 code [0x00007fd7f52af660, 0x00007fd7f52af770]
+Event: 124.524 Thread 0x00007fd80427f800  720       1       io.netty.buffer.SlicedByteBuf::capacity (5 bytes)
+Event: 124.524 Thread 0x00007fd80427f800 nmethod 720 0x00007fd7f52af7d0 code [0x00007fd7f52af920, 0x00007fd7f52afa30]
+Event: 124.524 Thread 0x00007fd80427f800  721       1       io.netty.util.ByteString::arrayOffset (5 bytes)
+Event: 124.524 Thread 0x00007fd80427f800 nmethod 721 0x00007fd7f52afa90 code [0x00007fd7f52afbe0, 0x00007fd7f52afcf0]
+Event: 124.525 Thread 0x00007fd80427f800  723       3       io.netty.handler.codec.http2.DefaultHttp2Connection::verifyKey (17 bytes)
+Event: 124.525 Thread 0x00007fd80427f800 nmethod 723 0x00007fd7f52afd50 code [0x00007fd7f52aff00, 0x00007fd7f52b0478]
+Event: 124.525 Thread 0x00007fd80427f800  724       3       io.netty.handler.codec.http2.DefaultHttp2Connection$DefaultPropertyKey::verifyConnection (20 bytes)
+Event: 124.525 Thread 0x00007fd80427f800 nmethod 724 0x00007fd7f52b0690 code [0x00007fd7f52b0800, 0x00007fd7f52b0a48]
+Event: 124.527 Thread 0x00007fd80427f800  725       3       io.netty.buffer.AbstractByteBuf::checkReadableBytes (102 bytes)
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (4 events):
+Event: 0.192 Thread 0x00007fd804361000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007fd7f5152bc4 method=java.lang.String.indexOf(II)I @ 49
+Event: 0.361 Thread 0x00007fd80400b800 Uncommon trap: reason=null_check action=make_not_entrant pc=0x00007fd7f51a7e44 method=java.lang.String.equals(Ljava/lang/Object;)Z @ 8
+Event: 0.363 Thread 0x00007fd80400b800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007fd7f51dec88 method=sun.misc.MetaIndex.mayContain(Ljava/lang/String;)Z @ 38
+Event: 14.675 Thread 0x00007fd804556800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007fd7f51bf9d4 method=java.lang.String.lastIndexOf([CII[CIII)I @ 66
+
+Internal exceptions (10 events):
+Event: 0.101 Thread 0x00007fd80400b800 Exception <a 'java/security/PrivilegedActionException'> (0x00000000d6f2b620) thrown at [/HUDSON/workspace/8-2-build-linux-amd64/jdk8u51/3951/hotspot/src/share/vm/prims/jvm.cpp, line 1382]
+Event: 0.101 Thread 0x00007fd80400b800 Exception <a 'java/security/PrivilegedActionException'> (0x00000000d6f2b7d8) thrown at [/HUDSON/workspace/8-2-build-linux-amd64/jdk8u51/3951/hotspot/src/share/vm/prims/jvm.cpp, line 1382]
+Event: 0.101 Thread 0x00007fd80400b800 Exception <a 'java/security/PrivilegedActionException'> (0x00000000d6f2d630) thrown at [/HUDSON/workspace/8-2-build-linux-amd64/jdk8u51/3951/hotspot/src/share/vm/prims/jvm.cpp, line 1382]
+Event: 0.101 Thread 0x00007fd80400b800 Exception <a 'java/security/PrivilegedActionException'> (0x00000000d6f2d7e8) thrown at [/HUDSON/workspace/8-2-build-linux-amd64/jdk8u51/3951/hotspot/src/share/vm/prims/jvm.cpp, line 1382]
+Event: 0.175 Thread 0x00007fd80400b800 Exception <a 'java/lang/NoClassDefFoundError': org/slf4j/LoggerFactory> (0x00000000d7204230) thrown at [/HUDSON/workspace/8-2-build-linux-amd64/jdk8u51/3951/hotspot/src/share/vm/classfile/systemDictionary.cpp, line 199]
+Event: 0.176 Thread 0x00007fd80400b800 Exception <a 'java/lang/NoClassDefFoundError': org/apache/log4j/Priority> (0x00000000d72181f8) thrown at [/HUDSON/workspace/8-2-build-linux-amd64/jdk8u51/3951/hotspot/src/share/vm/classfile/systemDictionary.cpp, line 199]
+Event: 0.189 Thread 0x00007fd80400b800 Exception <a 'java/lang/NoClassDefFoundError': javassist/ClassPath> (0x00000000d729f198) thrown at [/HUDSON/workspace/8-2-build-linux-amd64/jdk8u51/3951/hotspot/src/share/vm/classfile/systemDictionary.cpp, line 199]
+Event: 0.361 Thread 0x00007fd80400b800 Implicit null exception at 0x00007fd7f51a7c62 to 0x00007fd7f51a7e35
+Event: 14.728 Thread 0x00007fd804556800 Exception <a 'java/lang/NoSuchFieldError': method resolution failed> (0x00000000d7eba1d8) thrown at [/HUDSON/workspace/8-2-build-linux-amd64/jdk8u51/3951/hotspot/src/share/vm/prims/methodHandles.cpp, line 1125]
+Event: 14.731 Thread 0x00007fd804556800 Exception <a 'java/lang/NoSuchFieldError': method resolution failed> (0x00000000d7ec93d8) thrown at [/HUDSON/workspace/8-2-build-linux-amd64/jdk8u51/3951/hotspot/src/share/vm/prims/methodHandles.cpp, line 1125]
+
+Events (10 events):
+Event: 124.475 Executing VM operation: RevokeBias done
+Event: 124.524 Thread 0x00007fd7a8016000 Thread added: 0x00007fd7a8016000
+Event: 124.524 Executing VM operation: RevokeBias
+Event: 124.524 Executing VM operation: RevokeBias done
+Event: 124.527 loading class com/google/protobuf/Utf8
+Event: 124.527 loading class com/google/protobuf/Utf8 done
+Event: 124.528 loading class com/google/protobuf/Internal
+Event: 124.528 loading class com/google/protobuf/Internal done
+Event: 124.529 loading class io/grpc/examples/helloworld/HelloResponse$Builder
+Event: 124.529 loading class io/grpc/examples/helloworld/HelloResponse$Builder done
+
+
+Dynamic libraries:
+00400000-00401000 r-xp 00000000 08:06 10750988                           /home/adi/java/bin/java
+00600000-00601000 rw-p 00000000 08:06 10750988                           /home/adi/java/bin/java
+01694000-016b5000 rw-p 00000000 00:00 0                                  [heap]
+84400000-89700000 rw-p 00000000 00:00 0 
+89700000-d6c00000 ---p 00000000 00:00 0 
+d6c00000-d9500000 rw-p 00000000 00:00 0 
+d9500000-100000000 ---p 00000000 00:00 0 
+100000000-100160000 rw-p 00000000 00:00 0 
+100160000-140000000 ---p 00000000 00:00 0 
+7fd79c000000-7fd79c035000 rw-p 00000000 00:00 0 
+7fd79c035000-7fd7a0000000 ---p 00000000 00:00 0 
+7fd7a4000000-7fd7a4021000 rw-p 00000000 00:00 0 
+7fd7a4021000-7fd7a8000000 ---p 00000000 00:00 0 
+7fd7a8000000-7fd7a8031000 rw-p 00000000 00:00 0 
+7fd7a8031000-7fd7ac000000 ---p 00000000 00:00 0 
+7fd7ac000000-7fd7ac057000 rw-p 00000000 00:00 0 
+7fd7ac057000-7fd7b0000000 ---p 00000000 00:00 0 
+7fd7b0000000-7fd7b0078000 rw-p 00000000 00:00 0 
+7fd7b0078000-7fd7b4000000 ---p 00000000 00:00 0 
+7fd7b4000000-7fd7b4021000 rw-p 00000000 00:00 0 
+7fd7b4021000-7fd7b8000000 ---p 00000000 00:00 0 
+7fd7b8000000-7fd7b8021000 rw-p 00000000 00:00 0 
+7fd7b8021000-7fd7bc000000 ---p 00000000 00:00 0 
+7fd7bc000000-7fd7bc1f2000 rw-p 00000000 00:00 0 
+7fd7bc1f2000-7fd7c0000000 ---p 00000000 00:00 0 
+7fd7c0000000-7fd7c022f000 rw-p 00000000 00:00 0 
+7fd7c022f000-7fd7c4000000 ---p 00000000 00:00 0 
+7fd7c4000000-7fd7c4021000 rw-p 00000000 00:00 0 
+7fd7c4021000-7fd7c8000000 ---p 00000000 00:00 0 
+7fd7c8000000-7fd7c81d8000 rw-p 00000000 00:00 0 
+7fd7c81d8000-7fd7cc000000 ---p 00000000 00:00 0 
+7fd7cc000000-7fd7cc021000 rw-p 00000000 00:00 0 
+7fd7cc021000-7fd7d0000000 ---p 00000000 00:00 0 
+7fd7d0000000-7fd7d0021000 rw-p 00000000 00:00 0 
+7fd7d0021000-7fd7d4000000 ---p 00000000 00:00 0 
+7fd7d4000000-7fd7d4021000 rw-p 00000000 00:00 0 
+7fd7d4021000-7fd7d8000000 ---p 00000000 00:00 0 
+7fd7d8000000-7fd7d8021000 rw-p 00000000 00:00 0 
+7fd7d8021000-7fd7dc000000 ---p 00000000 00:00 0 
+7fd7dc000000-7fd7dc021000 rw-p 00000000 00:00 0 
+7fd7dc021000-7fd7e0000000 ---p 00000000 00:00 0 
+7fd7e0dfb000-7fd7e0dfe000 ---p 00000000 00:00 0 
+7fd7e0dfe000-7fd7e2efe000 rw-p 00000000 00:00 0                          [stack:2910]
+7fd7e2efe000-7fd7e2f01000 ---p 00000000 00:00 0 
+7fd7e2f01000-7fd7e4000000 rw-p 00000000 00:00 0                          [stack:2908]
+7fd7e4000000-7fd7e4021000 rw-p 00000000 00:00 0 
+7fd7e4021000-7fd7e8000000 ---p 00000000 00:00 0 
+7fd7e806d000-7fd7e8070000 ---p 00000000 00:00 0 
+7fd7e8070000-7fd7e82ae000 rw-p 00000000 00:00 0                          [stack:2786]
+7fd7e82ae000-7fd7e836e000 ---p 00000000 00:00 0 
+7fd7e836e000-7fd7e8371000 ---p 00000000 00:00 0 
+7fd7e8371000-7fd7e846f000 rw-p 00000000 00:00 0                          [stack:2785]
+7fd7e846f000-7fd7e8477000 r-xp 00000000 08:06 10750837                   /home/adi/java/jre/lib/amd64/libmanagement.so
+7fd7e8477000-7fd7e8677000 ---p 00008000 08:06 10750837                   /home/adi/java/jre/lib/amd64/libmanagement.so
+7fd7e8677000-7fd7e8678000 rw-p 00008000 08:06 10750837                   /home/adi/java/jre/lib/amd64/libmanagement.so
+7fd7e8678000-7fd7e8689000 r-xp 00000000 08:06 10750878                   /home/adi/java/jre/lib/amd64/libnio.so
+7fd7e8689000-7fd7e8888000 ---p 00011000 08:06 10750878                   /home/adi/java/jre/lib/amd64/libnio.so
+7fd7e8888000-7fd7e8889000 rw-p 00010000 08:06 10750878                   /home/adi/java/jre/lib/amd64/libnio.so
+7fd7e8889000-7fd7e888c000 ---p 00000000 00:00 0 
+7fd7e888c000-7fd7e8c8b000 rw-p 00000000 00:00 0                          [stack:2756]
+7fd7e8c8b000-7fd7e8ca1000 r-xp 00000000 08:06 10750851                   /home/adi/java/jre/lib/amd64/libnet.so
+7fd7e8ca1000-7fd7e8ea1000 ---p 00016000 08:06 10750851                   /home/adi/java/jre/lib/amd64/libnet.so
+7fd7e8ea1000-7fd7e8ea2000 rw-p 00016000 08:06 10750851                   /home/adi/java/jre/lib/amd64/libnet.so
+7fd7e8ea2000-7fd7e8ea3000 ---p 00000000 00:00 0 
+7fd7e8ea3000-7fd7e8fa3000 rw-p 00000000 00:00 0                          [stack:2753]
+7fd7e8fa3000-7fd7e8fa6000 ---p 00000000 00:00 0 
+7fd7e8fa6000-7fd7e90a4000 rw-p 00000000 00:00 0                          [stack:2752]
+7fd7e90a4000-7fd7e90a7000 ---p 00000000 00:00 0 
+7fd7e90a7000-7fd7e91a5000 rw-p 00000000 00:00 0                          [stack:2751]
+7fd7e91a5000-7fd7e91a8000 ---p 00000000 00:00 0 
+7fd7e91a8000-7fd7e92a6000 rw-p 00000000 00:00 0                          [stack:2750]
+7fd7e92a6000-7fd7e92a9000 ---p 00000000 00:00 0 
+7fd7e92a9000-7fd7e93a7000 rw-p 00000000 00:00 0                          [stack:2749]
+7fd7e93a7000-7fd7e93ac000 r-xp 00000000 08:06 11411453                   /usr/lib/x86_64-linux-gnu/libXdmcp.so.6.0.0
+7fd7e93ac000-7fd7e95ab000 ---p 00005000 08:06 11411453                   /usr/lib/x86_64-linux-gnu/libXdmcp.so.6.0.0
+7fd7e95ab000-7fd7e95ac000 r--p 00004000 08:06 11411453                   /usr/lib/x86_64-linux-gnu/libXdmcp.so.6.0.0
+7fd7e95ac000-7fd7e95ad000 rw-p 00005000 08:06 11411453                   /usr/lib/x86_64-linux-gnu/libXdmcp.so.6.0.0
+7fd7e95ad000-7fd7e95af000 r-xp 00000000 08:06 11411442                   /usr/lib/x86_64-linux-gnu/libXau.so.6.0.0
+7fd7e95af000-7fd7e97af000 ---p 00002000 08:06 11411442                   /usr/lib/x86_64-linux-gnu/libXau.so.6.0.0
+7fd7e97af000-7fd7e97b0000 r--p 00002000 08:06 11411442                   /usr/lib/x86_64-linux-gnu/libXau.so.6.0.0
+7fd7e97b0000-7fd7e97b1000 rw-p 00003000 08:06 11411442                   /usr/lib/x86_64-linux-gnu/libXau.so.6.0.0
+7fd7e97b1000-7fd7e97ce000 r-xp 00000000 08:06 11412640                   /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0
+7fd7e97ce000-7fd7e99ce000 ---p 0001d000 08:06 11412640                   /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0
+7fd7e99ce000-7fd7e99cf000 r--p 0001d000 08:06 11412640                   /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0
+7fd7e99cf000-7fd7e99d0000 rw-p 0001e000 08:06 11412640                   /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0
+7fd7e99d0000-7fd7e9b03000 r-xp 00000000 08:06 11411438                   /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0
+7fd7e9b03000-7fd7e9d03000 ---p 00133000 08:06 11411438                   /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0
+7fd7e9d03000-7fd7e9d04000 r--p 00133000 08:06 11411438                   /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0
+7fd7e9d04000-7fd7e9d08000 rw-p 00134000 08:06 11411438                   /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0
+7fd7e9d08000-7fd7e9d09000 rw-p 00000000 00:00 0 
+7fd7e9d09000-7fd7e9d0b000 r-xp 00000000 08:06 11408798                   /usr/lib/jayatana/libjayatanaag.so
+7fd7e9d0b000-7fd7e9f0a000 ---p 00002000 08:06 11408798                   /usr/lib/jayatana/libjayatanaag.so
+7fd7e9f0a000-7fd7e9f0b000 r--p 00001000 08:06 11408798                   /usr/lib/jayatana/libjayatanaag.so
+7fd7e9f0b000-7fd7e9f0c000 rw-p 00002000 08:06 11408798                   /usr/lib/jayatana/libjayatanaag.so
+7fd7e9f0c000-7fd7e9f0f000 ---p 00000000 00:00 0 
+7fd7e9f0f000-7fd7ea00d000 rw-p 00000000 00:00 0                          [stack:2748]
+7fd7ea00d000-7fd7ea6ef000 r--p 00000000 08:06 11410497                   /usr/lib/locale/locale-archive
+7fd7ea6ef000-7fd7ea6f2000 ---p 00000000 00:00 0 
+7fd7ea6f2000-7fd7ea7f0000 rw-p 00000000 00:00 0                          [stack:2747]
+7fd7ea7f0000-7fd7ea7f3000 ---p 00000000 00:00 0 
+7fd7ea7f3000-7fd7ea8f1000 rw-p 00000000 00:00 0                          [stack:2746]
+7fd7ea8f1000-7fd7ea8f2000 ---p 00000000 00:00 0 
+7fd7ea8f2000-7fd7ec000000 rw-p 00000000 00:00 0                          [stack:2745]
+7fd7ec000000-7fd7ec021000 rw-p 00000000 00:00 0 
+7fd7ec021000-7fd7f0000000 ---p 00000000 00:00 0 
+7fd7f003f000-7fd7f0041000 rw-p 00000000 00:00 0 
+7fd7f0041000-7fd7f005d000 r--s 00393000 08:06 10750911                   /home/adi/java/jre/lib/ext/cldrdata.jar
+7fd7f005d000-7fd7f0067000 r--s 00116000 08:06 10750905                   /home/adi/java/jre/lib/ext/localedata.jar
+7fd7f0067000-7fd7f006b000 r--s 00095000 08:06 10750899                   /home/adi/java/jre/lib/jsse.jar
+7fd7f006b000-7fd7f006d000 r--s 00006000 08:06 11936901                   /usr/share/java/jayatana.jar
+7fd7f006d000-7fd7f006f000 r--s 00006000 08:06 16908888                   /home/adi/Projects/DistriRPC/grpc-java/examples/build/install/grpc-examples/lib/hpack-0.11.0.jar
+7fd7f006f000-7fd7f0071000 r--s 00002000 08:06 16908887                   /home/adi/Projects/DistriRPC/grpc-java/examples/build/install/grpc-examples/lib/netty-resolver-4.1.0.Beta6.jar
+7fd7f0071000-7fd7f007c000 r--s 00083000 08:06 16908886                   /home/adi/Projects/DistriRPC/grpc-java/examples/build/install/grpc-examples/lib/netty-common-4.1.0.Beta6.jar
+7fd7f007c000-7fd7f017d000 rw-p 00000000 00:00 0 
+7fd7f017d000-7fd7f0355000 r--s 03d0c000 08:06 10750896                   /home/adi/java/jre/lib/rt.jar
+7fd7f0355000-7fd7f4589000 rw-p 00000000 00:00 0 
+7fd7f4589000-7fd7f458a000 ---p 00000000 00:00 0 
+7fd7f458a000-7fd7f468a000 rw-p 00000000 00:00 0                          [stack:2744]
+7fd7f468a000-7fd7f468b000 ---p 00000000 00:00 0 
+7fd7f468b000-7fd7f478b000 rw-p 00000000 00:00 0                          [stack:2743]
+7fd7f478b000-7fd7f478c000 ---p 00000000 00:00 0 
+7fd7f478c000-7fd7f488c000 rw-p 00000000 00:00 0                          [stack:2742]
+7fd7f488c000-7fd7f488d000 ---p 00000000 00:00 0 
+7fd7f488d000-7fd7f49b7000 rw-p 00000000 00:00 0                          [stack:2741]
+7fd7f49b7000-7fd7f4c21000 ---p 00000000 00:00 0 
+7fd7f4c21000-7fd7f4c4b000 rw-p 00000000 00:00 0 
+7fd7f4c4b000-7fd7f4eb5000 ---p 00000000 00:00 0 
+7fd7f4eb5000-7fd7f4eca000 rw-p 00000000 00:00 0 
+7fd7f4eca000-7fd7f4fff000 ---p 00000000 00:00 0 
+7fd7f4fff000-7fd7f5000000 rw-p 00000000 00:00 0 
+7fd7f5000000-7fd7f52c0000 rwxp 00000000 00:00 0 
+7fd7f52c0000-7fd804000000 ---p 00000000 00:00 0 
+7fd804000000-7fd8045c9000 rw-p 00000000 00:00 0 
+7fd8045c9000-7fd808000000 ---p 00000000 00:00 0 
+7fd808000000-7fd808008000 r--s 00057000 08:06 16908885                   /home/adi/Projects/DistriRPC/grpc-java/examples/build/install/grpc-examples/lib/netty-transport-4.1.0.Beta6.jar
+7fd808008000-7fd80800d000 r--s 00041000 08:06 16908883                   /home/adi/Projects/DistriRPC/grpc-java/examples/build/install/grpc-examples/lib/netty-codec-4.1.0.Beta6.jar
+7fd80800d000-7fd808012000 r--s 0003d000 08:06 16908882                   /home/adi/Projects/DistriRPC/grpc-java/examples/build/install/grpc-examples/lib/netty-handler-4.1.0.Beta6.jar
+7fd808012000-7fd80801a000 r--s 0006e000 08:06 16908881                   /home/adi/Projects/DistriRPC/grpc-java/examples/build/install/grpc-examples/lib/netty-codec-http-4.1.0.Beta6.jar
+7fd80801a000-7fd808027000 r--s 000ec000 08:06 16908880                   /home/adi/Projects/DistriRPC/grpc-java/examples/build/install/grpc-examples/lib/protobuf-java-3.0.0-beta-1.jar
+7fd808027000-7fd808052000 r--s 001fc000 08:06 16908877                   /home/adi/Projects/DistriRPC/grpc-java/examples/build/install/grpc-examples/lib/guava-18.0.jar
+7fd808052000-7fd80805d000 rw-p 00000000 00:00 0 
+7fd80805d000-7fd808412000 ---p 00000000 00:00 0 
+7fd808412000-7fd80842c000 r-xp 00000000 08:06 10750846                   /home/adi/java/jre/lib/amd64/libzip.so
+7fd80842c000-7fd80862c000 ---p 0001a000 08:06 10750846                   /home/adi/java/jre/lib/amd64/libzip.so
+7fd80862c000-7fd80862d000 rw-p 0001a000 08:06 10750846                   /home/adi/java/jre/lib/amd64/libzip.so
+7fd80862d000-7fd808639000 r-xp 00000000 08:06 5247208                    /lib/x86_64-linux-gnu/libnss_files-2.21.so
+7fd808639000-7fd808838000 ---p 0000c000 08:06 5247208                    /lib/x86_64-linux-gnu/libnss_files-2.21.so
+7fd808838000-7fd808839000 r--p 0000b000 08:06 5247208                    /lib/x86_64-linux-gnu/libnss_files-2.21.so
+7fd808839000-7fd80883a000 rw-p 0000c000 08:06 5247208                    /lib/x86_64-linux-gnu/libnss_files-2.21.so
+7fd80883a000-7fd808845000 r-xp 00000000 08:06 5247218                    /lib/x86_64-linux-gnu/libnss_nis-2.21.so
+7fd808845000-7fd808a44000 ---p 0000b000 08:06 5247218                    /lib/x86_64-linux-gnu/libnss_nis-2.21.so
+7fd808a44000-7fd808a45000 r--p 0000a000 08:06 5247218                    /lib/x86_64-linux-gnu/libnss_nis-2.21.so
+7fd808a45000-7fd808a46000 rw-p 0000b000 08:06 5247218                    /lib/x86_64-linux-gnu/libnss_nis-2.21.so
+7fd808a46000-7fd808a5d000 r-xp 00000000 08:06 5247202                    /lib/x86_64-linux-gnu/libnsl-2.21.so
+7fd808a5d000-7fd808c5c000 ---p 00017000 08:06 5247202                    /lib/x86_64-linux-gnu/libnsl-2.21.so
+7fd808c5c000-7fd808c5d000 r--p 00016000 08:06 5247202                    /lib/x86_64-linux-gnu/libnsl-2.21.so
+7fd808c5d000-7fd808c5e000 rw-p 00017000 08:06 5247202                    /lib/x86_64-linux-gnu/libnsl-2.21.so
+7fd808c5e000-7fd808c60000 rw-p 00000000 00:00 0 
+7fd808c60000-7fd808c68000 r-xp 00000000 08:06 5247204                    /lib/x86_64-linux-gnu/libnss_compat-2.21.so
+7fd808c68000-7fd808e67000 ---p 00008000 08:06 5247204                    /lib/x86_64-linux-gnu/libnss_compat-2.21.so
+7fd808e67000-7fd808e68000 r--p 00007000 08:06 5247204                    /lib/x86_64-linux-gnu/libnss_compat-2.21.so
+7fd808e68000-7fd808e69000 rw-p 00008000 08:06 5247204                    /lib/x86_64-linux-gnu/libnss_compat-2.21.so
+7fd808e69000-7fd808e73000 r-xp 00000000 08:06 10750853                   /home/adi/java/jre/lib/amd64/libinstrument.so
+7fd808e73000-7fd809072000 ---p 0000a000 08:06 10750853                   /home/adi/java/jre/lib/amd64/libinstrument.so
+7fd809072000-7fd809073000 rw-p 00009000 08:06 10750853                   /home/adi/java/jre/lib/amd64/libinstrument.so
+7fd809073000-7fd80909d000 r-xp 00000000 08:06 10750824                   /home/adi/java/jre/lib/amd64/libjava.so
+7fd80909d000-7fd80929d000 ---p 0002a000 08:06 10750824                   /home/adi/java/jre/lib/amd64/libjava.so
+7fd80929d000-7fd80929f000 rw-p 0002a000 08:06 10750824                   /home/adi/java/jre/lib/amd64/libjava.so
+7fd80929f000-7fd8092ac000 r-xp 00000000 08:06 10750840                   /home/adi/java/jre/lib/amd64/libverify.so
+7fd8092ac000-7fd8094ac000 ---p 0000d000 08:06 10750840                   /home/adi/java/jre/lib/amd64/libverify.so
+7fd8094ac000-7fd8094ae000 rw-p 0000d000 08:06 10750840                   /home/adi/java/jre/lib/amd64/libverify.so
+7fd8094ae000-7fd8094b5000 r-xp 00000000 08:06 5247263                    /lib/x86_64-linux-gnu/librt-2.21.so
+7fd8094b5000-7fd8096b4000 ---p 00007000 08:06 5247263                    /lib/x86_64-linux-gnu/librt-2.21.so
+7fd8096b4000-7fd8096b5000 r--p 00006000 08:06 5247263                    /lib/x86_64-linux-gnu/librt-2.21.so
+7fd8096b5000-7fd8096b6000 rw-p 00007000 08:06 5247263                    /lib/x86_64-linux-gnu/librt-2.21.so
+7fd8096b6000-7fd8097bd000 r-xp 00000000 08:06 5247181                    /lib/x86_64-linux-gnu/libm-2.21.so
+7fd8097bd000-7fd8099bc000 ---p 00107000 08:06 5247181                    /lib/x86_64-linux-gnu/libm-2.21.so
+7fd8099bc000-7fd8099bd000 r--p 00106000 08:06 5247181                    /lib/x86_64-linux-gnu/libm-2.21.so
+7fd8099bd000-7fd8099be000 rw-p 00107000 08:06 5247181                    /lib/x86_64-linux-gnu/libm-2.21.so
+7fd8099be000-7fd80a66c000 r-xp 00000000 08:06 10750862                   /home/adi/java/jre/lib/amd64/server/libjvm.so
+7fd80a66c000-7fd80a86c000 ---p 00cae000 08:06 10750862                   /home/adi/java/jre/lib/amd64/server/libjvm.so
+7fd80a86c000-7fd80a943000 rw-p 00cae000 08:06 10750862                   /home/adi/java/jre/lib/amd64/server/libjvm.so
+7fd80a943000-7fd80a987000 rw-p 00000000 00:00 0 
+7fd80a987000-7fd80ab47000 r-xp 00000000 08:06 5247122                    /lib/x86_64-linux-gnu/libc-2.21.so
+7fd80ab47000-7fd80ad47000 ---p 001c0000 08:06 5247122                    /lib/x86_64-linux-gnu/libc-2.21.so
+7fd80ad47000-7fd80ad4b000 r--p 001c0000 08:06 5247122                    /lib/x86_64-linux-gnu/libc-2.21.so
+7fd80ad4b000-7fd80ad4d000 rw-p 001c4000 08:06 5247122                    /lib/x86_64-linux-gnu/libc-2.21.so
+7fd80ad4d000-7fd80ad51000 rw-p 00000000 00:00 0 
+7fd80ad51000-7fd80ad54000 r-xp 00000000 08:06 5247139                    /lib/x86_64-linux-gnu/libdl-2.21.so
+7fd80ad54000-7fd80af53000 ---p 00003000 08:06 5247139                    /lib/x86_64-linux-gnu/libdl-2.21.so
+7fd80af53000-7fd80af54000 r--p 00002000 08:06 5247139                    /lib/x86_64-linux-gnu/libdl-2.21.so
+7fd80af54000-7fd80af55000 rw-p 00003000 08:06 5247139                    /lib/x86_64-linux-gnu/libdl-2.21.so
+7fd80af55000-7fd80af6a000 r-xp 00000000 08:06 10749907                   /home/adi/java/lib/amd64/jli/libjli.so
+7fd80af6a000-7fd80b16a000 ---p 00015000 08:06 10749907                   /home/adi/java/lib/amd64/jli/libjli.so
+7fd80b16a000-7fd80b16b000 rw-p 00015000 08:06 10749907                   /home/adi/java/lib/amd64/jli/libjli.so
+7fd80b16b000-7fd80b183000 r-xp 00000000 08:06 5247255                    /lib/x86_64-linux-gnu/libpthread-2.21.so
+7fd80b183000-7fd80b383000 ---p 00018000 08:06 5247255                    /lib/x86_64-linux-gnu/libpthread-2.21.so
+7fd80b383000-7fd80b384000 r--p 00018000 08:06 5247255                    /lib/x86_64-linux-gnu/libpthread-2.21.so
+7fd80b384000-7fd80b385000 rw-p 00019000 08:06 5247255                    /lib/x86_64-linux-gnu/libpthread-2.21.so
+7fd80b385000-7fd80b389000 rw-p 00000000 00:00 0 
+7fd80b389000-7fd80b3ad000 r-xp 00000000 08:06 5247094                    /lib/x86_64-linux-gnu/ld-2.21.so
+7fd80b3ad000-7fd80b3ae000 r--s 00000000 08:06 11936902                   /usr/share/java/jayatanaag.jar
+7fd80b3ae000-7fd80b3b0000 r--s 0002c000 08:06 16908884                   /home/adi/Projects/DistriRPC/grpc-java/examples/build/install/grpc-examples/lib/netty-buffer-4.1.0.Beta6.jar
+7fd80b3b0000-7fd80b3b5000 r--s 00036000 08:06 16908879                   /home/adi/Projects/DistriRPC/grpc-java/examples/build/install/grpc-examples/lib/netty-codec-http2-4.1.0.Beta6.jar
+7fd80b3b5000-7fd80b3b8000 r--s 00006000 08:06 16908878                   /home/adi/Projects/DistriRPC/grpc-java/examples/build/install/grpc-examples/lib/jsr305-3.0.0.jar
+7fd80b3b8000-7fd80b3bb000 r--s 00012000 08:06 16908876                   /home/adi/Projects/DistriRPC/grpc-java/examples/build/install/grpc-examples/lib/javax.json-1.0.4.jar
+7fd80b3bb000-7fd80b48c000 rw-p 00000000 00:00 0 
+7fd80b48c000-7fd80b48f000 ---p 00000000 00:00 0 
+7fd80b48f000-7fd80b591000 rw-p 00000000 00:00 0                          [stack:2740]
+7fd80b591000-7fd80b593000 r--s 00005000 08:06 16908875                   /home/adi/Projects/DistriRPC/grpc-java/examples/build/install/grpc-examples/lib/grpc-stub-0.10.0-SNAPSHOT.jar
+7fd80b593000-7fd80b594000 r--s 00001000 08:06 16908874                   /home/adi/Projects/DistriRPC/grpc-java/examples/build/install/grpc-examples/lib/grpc-protobuf-0.10.0-SNAPSHOT.jar
+7fd80b594000-7fd80b597000 r--s 00017000 08:06 16908873                   /home/adi/Projects/DistriRPC/grpc-java/examples/build/install/grpc-examples/lib/grpc-netty-0.10.0-SNAPSHOT.jar
+7fd80b597000-7fd80b59c000 r--s 0002f000 08:06 16908872                   /home/adi/Projects/DistriRPC/grpc-java/examples/build/install/grpc-examples/lib/grpc-core-0.10.0-SNAPSHOT.jar
+7fd80b59c000-7fd80b5a0000 r--s 00025000 08:06 16908871                   /home/adi/Projects/DistriRPC/grpc-java/examples/build/install/grpc-examples/lib/grpc-examples-0.10.0-SNAPSHOT.jar
+7fd80b5a0000-7fd80b5a8000 rw-s 00000000 08:06 2097184                    /tmp/hsperfdata_adi/2733
+7fd80b5a8000-7fd80b5a9000 rw-p 00000000 00:00 0 
+7fd80b5a9000-7fd80b5aa000 r--p 00000000 00:00 0 
+7fd80b5aa000-7fd80b5ac000 rw-p 00000000 00:00 0 
+7fd80b5ac000-7fd80b5ad000 r--p 00023000 08:06 5247094                    /lib/x86_64-linux-gnu/ld-2.21.so
+7fd80b5ad000-7fd80b5ae000 rw-p 00024000 08:06 5247094                    /lib/x86_64-linux-gnu/ld-2.21.so
+7fd80b5ae000-7fd80b5af000 rw-p 00000000 00:00 0 
+7fff89f41000-7fff89f63000 rw-p 00000000 00:00 0                          [stack]
+7fff89f77000-7fff89f79000 r--p 00000000 00:00 0                          [vvar]
+7fff89f79000-7fff89f7b000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+VM Arguments:
+jvm_args: -javaagent:/usr/share/java/jayatanaag.jar 
+java_command: io.grpc.examples.helloworld.HelloWorldServer
+java_class_path (initial): /home/adi/Projects/DistriRPC/grpc-java/examples/build/install/grpc-examples/lib/grpc-examples-0.10.0-SNAPSHOT.jar:/home/adi/Projects/DistriRPC/grpc-java/examples/build/install/grpc-examples/lib/grpc-core-0.10.0-SNAPSHOT.jar:/home/adi/Projects/DistriRPC/grpc-java/examples/build/install/grpc-examples/lib/grpc-netty-0.10.0-SNAPSHOT.jar:/home/adi/Projects/DistriRPC/grpc-java/examples/build/install/grpc-examples/lib/grpc-protobuf-0.10.0-SNAPSHOT.jar:/home/adi/Projects/DistriRPC/grpc-java/examples/build/install/grpc-examples/lib/grpc-stub-0.10.0-SNAPSHOT.jar:/home/adi/Projects/DistriRPC/grpc-java/examples/build/install/grpc-examples/lib/javax.json-1.0.4.jar:/home/adi/Projects/DistriRPC/grpc-java/examples/build/install/grpc-examples/lib/guava-18.0.jar:/home/adi/Projects/DistriRPC/grpc-java/examples/build/install/grpc-examples/lib/jsr305-3.0.0.jar:/home/adi/Projects/DistriRPC/grpc-java/examples/build/install/grpc-examples/lib/netty-codec-http2-4.1.0.Beta6.jar:/home/adi/Projects/DistriRPC/grpc-java/examples/build/install/grpc-examples/lib/protobuf-java-3.0.0-beta-1.jar:/home/adi/Projects/DistriRPC/grpc-java/examples/build/install/grpc-examples/lib/netty-codec-http-4.1.0.Beta6.jar:/home/adi/Projects/DistriRPC/grpc-java/examples/build/install/grpc-examples/lib/netty-handler-4.1.0.Beta6.jar:/home/adi/Projects/DistriRPC/grpc-java/examples/build/install/grpc-examples/lib/netty-codec-4.1.0.Beta6.jar:/home/adi/Projects/DistriRPC/grpc-java/examples/build/install/grpc-examples/lib/netty-buffer-4.1.0.Beta6.jar:/home/adi/Projects/DistriRPC/grpc-java/examples/build/install/grpc-examples/lib/netty-transport-4.1.0.Beta6.jar:/home/adi/Projects/DistriRPC/grpc-java/examples/build/install/grpc-examples/lib/netty-common-4.1.0.Beta6.jar:/home/adi/Projects/DistriRPC/grpc-java/examples/build/install/grpc-examples/lib/netty-resolver-4.1.0.Beta6.jar:/home/adi/Projects/DistriRPC/grpc-java/examples/build/install/grpc-examples/lib/hpack-0.11.0.jar:/usr/share/java/jayatanaa
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=/home/adi/java
+JAVA_TOOL_OPTIONS=-javaagent:/usr/share/java/jayatanaag.jar 
+PATH=/home/adi/google-cloud-sdk/bin:/home/adi/java/bin:/home/adi/grails/bin:/home/adi/gradle/bin:/home/adi/idea/bin:/home/adi/elasticsearch/bin:/home/adi/gae/bin:/home/adi/maven/bin:/home/adi/apache-tomcat-8.0.26/bin:/usr/local/go/bin:/home/adi/gopath/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
+SHELL=/bin/bash
+DISPLAY=:0
+
+Signal Handlers:
+SIGSEGV: [libjvm.so+0xaad540], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGBUS: [libjvm.so+0xaad540], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGFPE: [libjvm.so+0x90b6b0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGPIPE: [libjvm.so+0x90b6b0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGXFSZ: [libjvm.so+0x90b6b0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGILL: [libjvm.so+0x90b6b0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGUSR1: SIG_DFL, sa_mask[0]=00000000000000000000000000000000, sa_flags=none
+SIGUSR2: [libjvm.so+0x90ccf0], sa_mask[0]=00100000000000000000000000000000, sa_flags=SA_RESTART|SA_SIGINFO
+SIGHUP: [libjvm.so+0x90e040], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGINT: [libjvm.so+0x90e040], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGTERM: [libjvm.so+0x90e040], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGQUIT: [libjvm.so+0x90e040], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+
+
+---------------  S Y S T E M  ---------------
+
+OS:DISTRIB_ID=Ubuntu
+DISTRIB_RELEASE=15.04
+DISTRIB_CODENAME=vivid
+DISTRIB_DESCRIPTION="Ubuntu 15.04"
+
+uname:Linux 3.19.0-22-generic #22-Ubuntu SMP Tue Jun 16 17:15:15 UTC 2015 x86_64
+libc:glibc 2.21 NPTL 2.21 
+rlimit: STACK 8192k, CORE 0k, NPROC 31299, NOFILE 65536, AS infinity
+load average:0.81 0.48 0.30
+
+/proc/meminfo:
+MemTotal:        8104260 kB
+MemFree:         2795216 kB
+MemAvailable:    4038776 kB
+Buffers:          236484 kB
+Cached:          1749168 kB
+SwapCached:        41588 kB
+Active:          3429536 kB
+Inactive:        1610800 kB
+Active(anon):    2583740 kB
+Inactive(anon):  1094312 kB
+Active(file):     845796 kB
+Inactive(file):   516488 kB
+Unevictable:         492 kB
+Mlocked:             492 kB
+SwapTotal:       8316924 kB
+SwapFree:        7880884 kB
+Dirty:              1456 kB
+Writeback:             0 kB
+AnonPages:       3027972 kB
+Mapped:           481580 kB
+Shmem:            623368 kB
+Slab:             145864 kB
+SReclaimable:     100420 kB
+SUnreclaim:        45444 kB
+KernelStack:       10464 kB
+PageTables:        53156 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:    12369052 kB
+Committed_AS:    9428208 kB
+VmallocTotal:   34359738367 kB
+VmallocUsed:      559460 kB
+VmallocChunk:   34359080592 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:   1417216 kB
+CmaTotal:              0 kB
+CmaFree:               0 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+DirectMap4k:      303744 kB
+DirectMap2M:     5916672 kB
+DirectMap1G:     3145728 kB
+
+
+CPU:total 4 (2 cores per cpu, 2 threads per core) family 6 model 69 stepping 1, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, lzcnt, ht, tsc, tscinvbit, bmi1, bmi2
+
+/proc/cpuinfo:
+processor	: 0
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 69
+model name	: Intel(R) Core(TM) i5-4210U CPU @ 1.70GHz
+stepping	: 1
+microcode	: 0x1c
+cpu MHz		: 2406.375
+cache size	: 3072 KB
+physical id	: 0
+siblings	: 4
+core id		: 0
+cpu cores	: 2
+apicid		: 0
+initial apicid	: 0
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 fma cx16 xtpr pdcm pcid sse4_1 sse4_2 movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm ida arat epb pln pts dtherm tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid xsaveopt
+bugs		:
+bogomips	: 4789.20
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 1
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 69
+model name	: Intel(R) Core(TM) i5-4210U CPU @ 1.70GHz
+stepping	: 1
+microcode	: 0x1c
+cpu MHz		: 2402.718
+cache size	: 3072 KB
+physical id	: 0
+siblings	: 4
+core id		: 0
+cpu cores	: 2
+apicid		: 1
+initial apicid	: 1
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 fma cx16 xtpr pdcm pcid sse4_1 sse4_2 movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm ida arat epb pln pts dtherm tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid xsaveopt
+bugs		:
+bogomips	: 4789.20
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 2
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 69
+model name	: Intel(R) Core(TM) i5-4210U CPU @ 1.70GHz
+stepping	: 1
+microcode	: 0x1c
+cpu MHz		: 2533.781
+cache size	: 3072 KB
+physical id	: 0
+siblings	: 4
+core id		: 1
+cpu cores	: 2
+apicid		: 2
+initial apicid	: 2
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 fma cx16 xtpr pdcm pcid sse4_1 sse4_2 movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm ida arat epb pln pts dtherm tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid xsaveopt
+bugs		:
+bogomips	: 4789.20
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 3
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 69
+model name	: Intel(R) Core(TM) i5-4210U CPU @ 1.70GHz
+stepping	: 1
+microcode	: 0x1c
+cpu MHz		: 2567.906
+cache size	: 3072 KB
+physical id	: 0
+siblings	: 4
+core id		: 1
+cpu cores	: 2
+apicid		: 3
+initial apicid	: 3
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 fma cx16 xtpr pdcm pcid sse4_1 sse4_2 movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm ida arat epb pln pts dtherm tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid xsaveopt
+bugs		:
+bogomips	: 4789.20
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+
+
+Memory: 4k page, physical 8104260k(2795216k free), swap 8316924k(7880884k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (25.51-b03) for linux-amd64 JRE (1.8.0_51-b16), built on Jun  8 2015 19:28:07 by "java_re" with gcc 4.3.0 20080428 (Red Hat 4.3.0-8)
+
+time: Fri Oct  2 03:09:04 2015
+elapsed time: 124 seconds (0d 0h 2m 4s)
+
